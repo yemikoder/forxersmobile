@@ -1,0 +1,1 @@
+ /Users/trustbancgroup/Documents/Github/forxersmobile/.dart_tool/flutter_build/00529f454e68fc3e1059aecccbf4b266/native_assets.yaml: 

@@ -34,7 +34,7 @@ class _GroupPermissionScreenState extends State<GroupPermissionScreen> {
 
           Gap(height: 2.h,),
 
-          BodyText("Members can;"),
+          BodyText("Members can;", fontSize: 16,),
 
           Gap(height: 2.h,),
 
@@ -49,7 +49,7 @@ class _GroupPermissionScreenState extends State<GroupPermissionScreen> {
             child: Column(
               children: [
 
-                ActionTile2(title: "Info", image: "assets/images/InfoCircle.png", onTap: () {  },
+                ActionTile2(title: "Edit group settings", image: "assets/images/InfoCircle.png", onTap: () {  },
                   widget: Switch.adaptive(
                     value: widget.value,
                     activeColor: Colors.grey.shade200,
@@ -64,7 +64,35 @@ class _GroupPermissionScreenState extends State<GroupPermissionScreen> {
                     },
                   ),),
 
-                ActionTile2(title: "Make group admin", image: "assets/pngs/ShieldUser.png", onTap: () {  }, widget: SizedBox(),),
+                ActionTile2(title: "Edit group settings", image: "assets/images/InfoCircle.png", onTap: () {  },
+                  widget: Switch.adaptive(
+                    value: widget.value,
+                    activeColor: Colors.grey.shade200,
+                    trackColor: !widget.value ? MaterialStateProperty.all<Color>(Color(0xFFD5ECFF)) : MaterialStateProperty.all<Color>(Color(0xFFEFF0F2)),
+                    thumbColor: !widget.value ? MaterialStateProperty.all<Color>(BrandStyleConfig.primary) : MaterialStateProperty.all<Color>(BrandStyleConfig.darkPrimary),
+                    onChanged: (value) {
+
+                      // update
+                      setState(() {
+                        value = !widget.value;
+                      });
+                    },
+                  ),),
+
+                ActionTile2(title: "Send message", image: "assets/images/InfoCircle.png", onTap: () {  },
+                  widget: Switch.adaptive(
+                    value: widget.value,
+                    activeColor: Colors.grey.shade200,
+                    trackColor: !widget.value ? MaterialStateProperty.all<Color>(Color(0xFFD5ECFF)) : MaterialStateProperty.all<Color>(Color(0xFFEFF0F2)),
+                    thumbColor: !widget.value ? MaterialStateProperty.all<Color>(BrandStyleConfig.primary) : MaterialStateProperty.all<Color>(BrandStyleConfig.darkPrimary),
+                    onChanged: (value) {
+
+                      // update
+                      setState(() {
+                        value = !widget.value;
+                      });
+                    },
+                  ),),
 
               ],
             ),

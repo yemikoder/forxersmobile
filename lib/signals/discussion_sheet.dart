@@ -113,16 +113,19 @@ class DiscussionSheet extends StatelessWidget {
                     barrierColor: AppColors.foreground.withOpacity(0.5),
                     context: context,
                     builder: (ctx) {
-                      return SecondaryBottomSheet(
-                          height: 60.h,
-                          titleWidget: Row(
-                            children: [
-                              Image.asset("assets/images/userprofileimage.png", height: 45,),
-                              Gap(width: 4.w,),
-                              TitleText("Adanna", fontSize: 18, letterSpacing: -0.40,),
-                            ],
-                          ),
-                          child: MemberActionSheet()
+                      return SizedBox(
+                        height: 60.h,
+                        child: SecondaryBottomSheet(
+                            height: 60.h,
+                            titleWidget: Row(
+                              children: [
+                                Image.asset("assets/images/userprofileimage.png", height: 45,),
+                                Gap(width: 4.w,),
+                                TitleText("Adanna", fontSize: 18, letterSpacing: -0.40,),
+                              ],
+                            ),
+                            child: MemberActionSheet()
+                        ),
                       );});
                 },
                 title: item['name'],

@@ -9,8 +9,10 @@ class OneLineTile2 extends StatelessWidget {
   final String title;
   final void Function()? onTap;
   final bool isAdmin;
+  final String? image;
+  final double? imageSize;
 
-  const OneLineTile2({super.key, required this.title, required this.onTap, required this.isAdmin});
+  const OneLineTile2({super.key, required this.title, required this.onTap, required this.isAdmin, this.image = "assets/pngs/forxersprofilepic.png", this.imageSize = 35});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class OneLineTile2 extends StatelessWidget {
       onTap: onTap,
       child: ListTile(
         contentPadding: EdgeInsets.zero,
-        leading: Image.asset("assets/pngs/forxersprofilepic.png", height: 35,),
+        leading: Image.asset(image!, height: imageSize!,),
         title: BodyText(title, fontSize: 16,),
         trailing: SizedBox(
           width: 30.w,
@@ -28,7 +30,7 @@ class OneLineTile2 extends StatelessWidget {
             children: [
               if(isAdmin) Image.asset("assets/pngs/ShieldUser.png", height: 25,),
               Gap(width: 1.w,),
-              Icon(Icons.arrow_forward_ios_rounded, color: AppColors.disabled, size: 20,),
+              Icon(Icons.arrow_forward_ios_rounded, color: AppColors.disabled, size: 16,),
             ],
           ),
         ),

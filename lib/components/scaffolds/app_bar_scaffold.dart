@@ -114,9 +114,11 @@ class AppBarScaffold extends StatelessWidget {
             children: [
 
               // Inner shadow at the bottom
-              if(showFlash) Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Image.asset("assets/images/splasheffect.png",)
+              if(showFlash) IgnorePointer(
+                child: Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Image.asset("assets/images/splasheffect.png",)
+                ),
               ),
               // Main Content
               isFixed

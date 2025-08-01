@@ -27,6 +27,7 @@ class PrimaryTextField extends StatelessWidget {
   final String? Function(String?)? validate;
   final Color? fillColor;
   final Function(String)? onFieldSubmitted;
+  final Color? enabledBorderColor;
 
   const PrimaryTextField({
     Key? key,
@@ -52,6 +53,7 @@ class PrimaryTextField extends StatelessWidget {
     this.enableInteractiveSelection,
     this.focusNode,
     this.fillColor = AppColors.foreground,
+    this.enabledBorderColor = Colors.transparent
   }) : super(key: key);
 
   @override
@@ -124,7 +126,7 @@ class PrimaryTextField extends StatelessWidget {
               color: Colors.red,
             ),
             enabledBorder: OutlineInputBorder(
-              borderSide: const BorderSide(width: 1.3, color: Colors.transparent),
+              borderSide: BorderSide(width: 1, color: enabledBorderColor!),
               borderRadius: BorderRadius.circular(12),
             ),
             errorBorder: OutlineInputBorder(

@@ -1,0 +1,89 @@
+gradle-wrapper.jar
+/.gradle
+/captures/
+/gradlew
+/gradlew.bat
+/local.properties
+GeneratedPluginRegistrant.java
+
+# Flutter/Dart/Pub related
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+build/
+.dart_tool/
+generated_plugin_registrant.dart
+
+# Symbolic link created by Android Studio for Flutter
+.idea/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+*.swp
+
+# VS Code related
+.vscode/
+
+# Android related
+android/.gradle/
+android/app/build/
+android/local.properties
+android/.idea/
+*.jks
+*.keystore
+
+# iOS related
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/.generated/
+ios/Runner.xcworkspace/
+ios/Runner.xcodeproj/project.xcworkspace/
+ios/Runner.xcodeproj/xcuserdata/
+ios/.dart_tool/
+
+# macOS related (if building macOS desktop app)
+macos/Flutter/ephemeral/
+macos/Flutter/GeneratedPluginRegistrant.swift
+macos/Pods/
+macos/.symlinks/
+macos/build/
+
+# Web related
+web/.dart_tool/
+web/build/
+
+# Windows related (if building Windows desktop app)
+windows/Flutter/ephemeral/
+windows/build/
+
+# Linux related (if building Linux desktop app)
+linux/Flutter/ephemeral/
+linux/build/
+
+# Generated files
+*.g.dart
+*.freezed.dart
+
+# Others
+.env
+*.log
+*.tmp
+*.DS_Store
+
+# Firebase related
+ios/Runner/GoogleService-Info.plist
+android/app/google-services.json
+
+
+# Remember to never publicly share your keystore.
+# See https://flutter.dev/to/reference-keystore
+key.properties
+**/*.keystore
+**/*.jks
